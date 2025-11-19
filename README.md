@@ -82,7 +82,7 @@ exist separately as NDA-protected, non-public codebases.
 
 Researchers and organizations working on AI safety, 
 LLM stability evaluation, contextual drift mitigation, 
-or cognitive-structure-based analysis are welcome to contact us 
+or analysis are welcome to contact us 
 for SAFE-layer information exchange or joint evaluation.
 
 
@@ -94,7 +94,7 @@ SAFE帯域へ戻す動作を示す SAFE 層デモです。
 実運用向け SAFE-CSM 実装（LLM統合版／多因子版）は、
 NDA 前提の非公開コードとして別途存在します。
 
-AI安全性・安定化・文脈ドリフト解析・認知構造アプローチに
+AI安全性・安定化・文脈ドリフト解析に
 関心のある研究者・企業の方は、SAFE層の範囲での
 情報交換や共同検証の相談を歓迎します。
 
