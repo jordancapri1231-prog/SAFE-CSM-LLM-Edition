@@ -101,3 +101,5 @@ AI安全性・安定化・文脈ドリフト解析・認知構造アプローチ
 Research & technical inquiries:
 jordan.capri.1231@gmail.com
 
+Main Hub:
+https://github.com/jordancapri1231-prog/SAFE-CSM
