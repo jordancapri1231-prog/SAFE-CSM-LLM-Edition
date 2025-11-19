@@ -1,0 +1,121 @@
+SAFE-CSM (LLM Edition) – Full Description
+External Observation Framework for LLM Output Stability
+
+Version: 1.0
+Date: 2025-11-19
+Author: ジョダ（joda）
+License: SAFE Academic License 2025
+
+
+============================================================
+1. Introduction
+============================================================
+
+The SAFE-CSM (LLM Edition) is a non-adaptive, external observation framework for analyzing contextual stability in large language model outputs.  
+The method does not access or infer internal model operations.  
+Instead, it evaluates observable variation in external signals through abstract stability indicators.
+
+This edition focuses on providing a reproducible SAFE-layer evaluation tool that remains fully outside the internal mechanisms of LLMs.
+
+
+============================================================
+2. Design Overview
+============================================================
+
+SAFE-CSM (LLM Edition) uses:
+
+- Six observable factors (J1–J6)
+- A stability index Δφ
+- A one-dimensional direction scalar θ ∈ [0, 1]
+- A fixed SAFE correction band
+
+All values are fixed or randomly generated.  
+No learning or hidden-state inference is used.
+
+The purpose is to illustrate:
+
+- fixation-like behavior  
+- drift tendencies  
+- minimal stabilization using fixed corrections  
+
+
+============================================================
+3. Observable Factors and Stability Index
+============================================================
+
+The six observable factors:
+
+  J1, J2, J3, J4, J5, J6
+
+are external numerical indicators in the range [-1, 1].  
+They have no relationship to internal neural representations.
+
+Δφ is defined as:
+
+    Δφ = J_affect – J_reflex
+
+where:
+
+- J_affect = J3  
+- J_reflex = J6  
+
+Δφ is an abstract observable index for characterizing drift.
+
+
+============================================================
+4. θ as a One-Dimensional Output-Direction Scalar
+============================================================
+
+The scalar θ ∈ [0, 1] represents:
+
+- θ → 0 : fixation-like behaviors  
+- θ → 1 : drift-like behaviors  
+
+The LLM-only update introduces small random variation and slight directional tendencies to illustrate typical instability patterns.  
+No internal model behavior is referenced.
+
+
+============================================================
+5. SAFE-CSM Correction
+============================================================
+
+SAFE-CSM applies a minimal, predefined correction only when θ leaves a stability band:
+
+- below LOW  → nudged upward  
+- above HIGH → nudged downward  
+
+The correction EPS is small and fixed.  
+This feature illustrates how small, external-only adjustments can maintain observable stability without modifying internal model logic.
+
+
+============================================================
+6. Demonstration Procedure
+============================================================
+
+The demonstration script:
+
+1. Initializes θ = 0.5  
+2. Applies LLM-only update  
+3. Applies SAFE-CSM correction  
+4. Records θ for two sequences  
+5. Visualizes drift and stabilization  
+
+
+============================================================
+7. SAFE Compliance
+============================================================
+
+SAFE-CSM (LLM Edition) meets all SAFE-layer requirements:
+
+- No access to internal model parameters  
+- No inference of internal mechanisms  
+- No learning, training, or optimization  
+- All parameters fixed  
+- Non-adaptive and fully transparent  
+- Observation-only behavior  
+
+All functions and values are designed for safe demonstration.
+
+This project includes reference implementations, plots, and documentation for reproducible evaluation of contextual stability in LLM systems.
+
+Implementation support for SAFE-CSM (LLM Edition) requires an NDA to prevent misconfiguration or unintended use.

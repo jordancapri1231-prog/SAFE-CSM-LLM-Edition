@@ -1,0 +1,28 @@
+PROJECT TITLE:
+SAFE-CSM (LLM Edition)
+
+VERSION:
+1.0
+
+DATE OF PUBLICATION:
+2025-11-19
+
+DESCRIPTION:
+SAFE-CSM (LLM Edition) provides an external, non-adaptive observation framework for analyzing contextual stability in large language model outputs.  
+All parameters are fixed or randomized for demonstration.
+
+FILES:
+- SAFE-CSM_LLM_demo.py
+- SAFE-CSM_LLM_FullDescription.txt
+- SAFE-CSM_Report_LLM_Edition.txt
+- LICENSE_SAFE.txt
+- Figures (theta drift plots)
+
+LICENSE:
+SAFE Academic License 2025
+
+CONTACT:
+[jordan.capri.1231@gmail.com]
+
+NOTE:
+Implementation support requires NDA.

@@ -1,0 +1,162 @@
+Title:
+SAFE-CSM (LLM Edition): External Observation Framework for Contextual Stability in Large Language Models
+
+Version: 1.0
+Date: 2025-11-19
+Author: ジョダ（joda）
+License: SAFE Academic License 2025
+
+Abstract
+
+The SAFE-CSM (LLM Edition) provides a non-adaptive, observation-based framework for evaluating contextual stability in large language models.
+The module assesses stability through six normalized external factors and an interpretable difference measure Δφ, without accessing or inferring any internal mechanisms.
+A minimal scalar model (θ ∈ [0,1]) is used to illustrate typical LLM output tendencies such as fixation, collapse, and directional drift.
+All parameters are fixed or randomized for SAFE compliance.
+This document provides the core description of the LLM Edition and the accompanying materials included in the project archive.
+
+1. Overview
+
+The Context Stabilization Module (SAFE-CSM) is designed to observe and evaluate the external stability of language model outputs.
+It does not access, infer, or approximate internal generative mechanisms.
+Instead, it provides a reproducible method to quantify stability using normalized factors derived solely from observable output behavior.
+
+The LLM Edition of SAFE-CSM introduces a minimal scalar model that represents model output tendencies along a one-dimensional axis θ ∈ [0,1].
+This model is used exclusively for demonstration and educational purposes.
+
+2. Evaluation Factors
+
+SAFE-CSM evaluates six normalized factors:
+
+J_info
+
+J_logic
+
+J_affect
+
+J_norm
+
+J_style
+
+J_reflex
+
+These factors serve as independent, abstract indicators of output balance.
+
+The stability index Δφ is defined as:
+
+Δφ = | J_affect – J_reflex |
+
+
+This difference is used only as an observable indicator of contextual drift.
+
+A composite stability score is defined as:
+
+J_total = mean(Js) × (1 – Δφ)
+
+
+All values are randomized or fixed for demonstration.
+
+3. Minimal External Model for LLM Output
+
+The LLM Edition uses a minimal scalar model:
+
+θ ∈ [0, 1]
+
+
+θ is interpreted only as an external measure of output direction.
+
+LLM-like fluctuations are simulated by adding random noise and a slight tendency toward extreme values.
+SAFE-CSM applies a small fixed corrective bias within a predefined band:
+
+LOW = 0.2
+
+HIGH = 0.8
+
+This minimal model does not represent internal logic.
+It is strictly an external representation used to illustrate observable patterns.
+
+4. Stability Patterns
+
+SAFE-CSM demonstrates three external stability patterns commonly seen in LLM behavior:
+
+1. Fixation (upper bound)
+
+LLM-only behavior tends to converge toward θ → 1.
+SAFE-CSM prevents excessive fixation by applying a minimal downward correction.
+
+2. Collapse (lower bound)
+
+LLM-only behavior sinks toward θ → 0.
+SAFE-CSM applies a minimal upward correction.
+
+3. Directional Drift
+
+LLM-only behavior trends beyond the stability band.
+SAFE-CSM maintains θ within the 0.2–0.8 range.
+
+Three plots visualizing these patterns are included in the ZIP archive:
+
+figure_1_fixed_to_release.png
+
+figure_2_sink_control.png
+
+figure_3_divergence_stabilized.png
+
+5. SAFE Declaration
+
+This framework adheres strictly to SAFE requirements:
+
+No learning
+
+No optimization
+
+No adaptation
+
+No internal access
+
+No inference of internal mechanisms
+
+All functions fixed or randomized
+
+Evaluation-only, observation-only
+
+SAFE-CSM is a non-generative, non-controlling module.
+
+Implementation support for SAFE-CSM (Industry/LLM Edition) requires an NDA to prevent misconfiguration or unintended use.
+
+6. Files Included
+
+All files in the OSF archive are SAFE-compliant:
+
+SAFE-CSM_LLM_demo.py
+
+SAFE-CSM_LLM_demo.txt
+
+figure_1_fixed_to_release.png
+
+figure_2_sink_control.png
+
+figure_3_diverggence_stabilized.png
+
+SAFE-CSM_LLM_FullDescription.txt
+
+LLM Edition — metadata
+
+LICENSE_SAFE.txt
+
+This report
+
+7. License
+
+The project is distributed under the
+SAFE Academic License 2025,
+which restricts redistribution or modification without written consent.
+
+(license text included in archive)
+
+8. Contact
+
+For academic inquiries:
+
+jordan.capri.1231@gmail.com
+
+ジョダ（joda）
